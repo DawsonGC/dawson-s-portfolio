@@ -77,10 +77,13 @@ img, video {
 }
 
 .media-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Centers items horizontally */
+  gap: 30px;  /* Adds space between images/videos */
   width: 100%;
-  max-width: 900px;  /* Adjust this value as needed */
-  margin: 0 auto;    /* Center the container */
-  padding: 20px 0;   /* Optional spacing */
+  max-width: 900px;
+  margin: 20px auto;
 }
 
 
@@ -109,9 +112,8 @@ img, video {
 }
 
 img, video, iframe {
-  max-width: 100%;   /* Keeps images inside the page width */
-  height: auto;      /* Maintains aspect ratio */
+  max-width: 100%;
+  height: auto;
   border-radius: 8px;
   display: block;
-  margin: 0 auto;    /* Centers content horizontally */
 }
