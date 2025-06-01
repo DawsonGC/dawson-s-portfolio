@@ -77,12 +77,11 @@ img, video {
 }
 
 .media-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px; /* Adds space between images and videos */
-  margin: 20px 0;
+  width: 100%;
+  max-width: 900px;  /* Adjust to your liking */
+  margin: 20px auto;
 }
+
 
 .media-container img,
 .media-container video {
@@ -108,4 +107,10 @@ img, video {
   border: none;
 }
 
-
+img, video, iframe {
+  max-width: 100%;   /* Keeps images inside the page width */
+  height: auto;      /* Maintains aspect ratio */
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;    /* Centers content horizontally */
+}
