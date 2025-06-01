@@ -79,7 +79,7 @@ img, video {
 .media-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Aligns all children (images, videos) to the left */
+  align-items: flex-start; /* Aligns to the left */
   gap: 30px;
   width: 100%;
   max-width: 900px;
@@ -96,10 +96,8 @@ img, video {
 
 .video-container {
   position: relative;
-  width: 70%;  /* Adjust width as needed */
-  max-width: 700px;
-  aspect-ratio: 16 / 9; /* Modern CSS property to lock ratio */
-  margin: 20px 0;  /* Top and bottom space */
+  width: 100%;         /* Make it fit the container */
+  aspect-ratio: 16 / 9;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
