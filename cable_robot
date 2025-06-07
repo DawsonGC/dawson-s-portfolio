@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cable-Driven 3D Positioning Robot | Dawson Golden-Collum</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+    }
+    h1 {
+      margin-top: 0;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      margin: 1rem 0;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .caption {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: -0.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    a {
+      color: #1e3a8a;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1e3a8a;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cable-Driven 3D Positioning Robot</h1>
+    <p>Precision Motion System | ENGR 266 Project | Oregon Institute of Technology</p>
+  </header>
+  <main>
+    <p><a href="index.html">&larr; Back to Home</a></p>
+
+    <img src="images/cable_robot.jpg" alt="Cable-Driven Robot">
+
+    <h2>Project Overview</h2>
+    <p>This project explored how a minimal hardware system—just cables, motors, and a controller—could achieve precise motion in three-dimensional space. Designed as a clean-room alternative to traditional gantry systems, this robot suspended a toolhead using four cables, calculating exact cable lengths in real time to position the toolhead accurately within the workspace. The concept had to be simple, elegant, and mechanically robust—every calculation and component had to deliver.</p>
+
+    <img src="images/top_view_diagram.jpg" alt="Cable Length Diagram">
+    <div class="caption">Cable length geometry for inverse kinematics (Top View)</div>
+
+    <h2>My Role</h2>
+    <p>I executed every phase of the project from concept to completion. I modeled the structure in SolidWorks, derived the motion control equations from first principles, built the hardware, and programmed the firmware on Arduino. I also designed a remote-control interface using an IR receiver, allowing full 3D navigation at the press of a button. This wasn’t just a technical exercise—it was a chance to prove that thoughtful engineering could make simple materials achieve complex motion.</p>
+
+    <h2>Engineering Challenges and Breakthroughs</h2>
+    <ul>
+      <li>Derived inverse kinematics using 3D Pythagorean relationships to calculate real-time cable lengths based on Cartesian coordinates</li>
+      <li>Invented a custom "slope method" algorithm to interpolate step timing across motors, allowing simultaneous and smooth movement without desynchronization</li>
+      <li>Designed robust boundary checking logic to prevent collisions and ensure safe movement within the workspace volume</li>
+      <li>Integrated IR-based control system and wrote Arduino code to interpret directional and Z-axis commands from a standard remote</li>
+      <li>Designed an efficient wiring and power distribution system to simultaneously power logic (5V) and stepper drivers (9V) from a single benchtop source</li>
+    </ul>
+
+    <img src="images/control_board.jpg" alt="Arduino and Driver Wiring">
+    <div class="caption">Custom-built control board with Arduino, motor drivers, and isolated power rails</div>
+
+    <img src="images/ir_receiver.jpg" alt="IR Receiver Close-Up">
+    <div class="caption">IR receiver mounted on breadboard for remote 3D control</div>
+
+    <h2>Results</h2>
+    <p>The finished platform achieved a positional resolution of 0.01178 mm—finer than a human hair—and maintained that precision consistently across a cubic workspace approximately 300mm per side. The system was tested through repeated motion sequences including edge travel and diagonal paths, and retained accurate return-to-position capability. The success of this project proved the feasibility of a purely cable-driven positioning system with no mechanical guides or rails. It stood out as one of the most technically complete and creatively executed projects in the course.</p>
+
+    <img src="images/platform_payload.jpg" alt="Toolhead Suspended by Cables">
+    <div class="caption">Suspended toolhead shown mid-movement within the 3D workspace</div>
+
+    <h2>Tools & Technologies Used</h2>
+    <ul>
+      <li>SolidWorks (full frame and cable path modeling)</li>
+      <li>Arduino (firmware and IR control logic)</li>
+      <li>IR Receiver Module and Remote Input Programming</li>
+      <li>Mathematical modeling for cable kinematics and motor step calculation</li>
+      <li>Custom wiring layout for voltage regulation and signal routing</li>
+    </ul>
+  </main>
+  <footer>
+    <p>&copy; 2025 Dawson Golden-Collum</p>
+  </footer>
+</body>
+</html>
