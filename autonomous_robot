@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autonomous Robot Project | Dawson Golden-Collum</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #e5e5e5;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: #1e3a8a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+    }
+    h1 {
+      margin-top: 0;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      margin: 1rem 0;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .caption {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: -0.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1e3a8a;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Autonomous Robot Project</h1>
+    <p>Embedded Systems | Autonomous Navigation | Real-Time Optimization</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="experience.html">Industry Experience</a>
+  </nav>
+  <main>
+    <p><a href="index.html">&larr; Back to Home</a></p>
+
+    <img src="images/autonomous_robot.jpg" alt="Autonomous Robot Build">
+    <div class="caption">Custom-built autonomous robot programmed for obstacle avoidance and Bluetooth control</div>
+
+    <h2>Project Overview</h2>
+    <p>This robot was built as part of an automation and robotics course. The assignment involved assembling a wheeled robot kit and programming it to autonomously navigate its environment. While the physical build was straightforward, the software and control systems required extensive debugging and re-engineering due to outdated documentation and incomplete libraries.</p>
+
+    <h2>Challenges and Solutions</h2>
+    <p>The original motor driver documentation was incorrect, requiring me to manually map the control pins and match them to functional driver libraries. After verifying motor control, I focused on the ultrasonic sensor and rotating servo. By using a dedicated library and modifying scan behavior, I was able to generate 180° obstacle scans, enabling effective environment sensing.</p>
+
+    <p>The first version of the robot scanned one degree at a time with ~20ms delay per step, which significantly slowed the robot. I optimized the scan loop by refactoring delays and improving control logic, resulting in a fast and reliable obstacle detection system capable of running at full motor speed while avoiding collisions.</p>
+
+    <h2>Functionality</h2>
+    <ul>
+      <li>Autonomous collision avoidance using real-time distance scanning</li>
+      <li>Dynamic sweep of ±90° with trigger-based wall detection logic</li>
+      <li>Failsafe right-turn maneuver when objects are within 100mm</li>
+      <li>Bluetooth integration for manual override using phone-based character commands</li>
+    </ul>
+
+    <h2>Technologies Used</h2>
+    <ul>
+      <li>Ultrasonic sensor (HC-SR04) with servo-mounted sweep</li>
+      <li>Motor driver board (manually remapped and configured)</li>
+      <li>Custom C++ firmware using Arduino libraries and Bluetooth serial communication</li>
+    </ul>
+
+    <h2>Outcome</h2>
+    <p>The robot successfully completed its mission objectives, navigating autonomously and adapting in real-time to new obstacles. The integration of Bluetooth control provided additional functionality and demonstrated mastery of embedded systems, sensor integration, and real-time optimization in robotics.</p>
+
+  </main>
+  <footer>
+    <p>&copy; 2025 Dawson Golden-Collum</p>
+  </footer>
+</body>
+</html>
