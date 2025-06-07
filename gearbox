@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Printed Planetary Gearbox | Dawson Golden-Collum</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+    }
+    h1 {
+      margin-top: 0;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      margin: 1rem 0;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .caption {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: -0.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    a {
+      color: #1e3a8a;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1e3a8a;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>3D Printed Planetary Gearbox</h1>
+    <p>Compact Transmission System | Personal Project | FDM Printable</p>
+  </header>
+  <main>
+    <p><a href="index.html">&larr; Back to Home</a></p>
+
+    <img src="images/planetary_gearbox_cad.png" alt="Planetary Gearbox CAD Render">
+    <div class="caption">Exploded CAD view of 3D printed planetary gearbox</div>
+
+    <h2>Project Overview</h2>
+    <p>This project was a ground-up design of a compact planetary gearbox intended for FDM 3D printing. The goal was to create a fully functional, easy-to-assemble transmission system that could be manufactured in a single print session. The system includes screws and bolts for securing the outer casing, while the carrier uses a press-fit, the gears are designed with clearance fits to ensure smooth motion, and alignment features use a light press-fit for disassembly ease and positional stability.</p>
+
+    <h2>My Role</h2>
+    <p>I was responsible for all aspects of the gearbox—from gear ratio calculations and CAD modeling to printing, post-processing, and testing. I designed the gear profiles manually in Fusion 360, accounting for printer tolerances and PLA flexibility to ensure a tight but interference-free fit. The result was a fully functional planetary gearbox with smooth rotation and a modular architecture designed for future upgrades.</p>
+
+    <h2>Engineering Details</h2>
+    <ul>
+      <li>Designed for a 4:1 reduction ratio using a single-stage planetary configuration</li>
+      <li>Custom tolerances tuned for FDM printers to ensure gear meshing without post-machining</li>
+      <li>Press-fit pins and modular assembly allowed for simple construction and servicing</li>
+      <li>Integrated alignment ribs and notches ensured coaxial integrity</li>
+      <li>Outer casing secured with standard machine screws to enable repeatable disassembly</li>
+      <li>All components fit within a single 256mm x 256mm build plate for streamlined printing</li>
+      <li>This was the third design iteration, refined for better meshing, tolerance control, and modularity</li>
+      <li>Utilized a combination of press fits (for the carrier) and clearance fits (for gears) to balance structural retention and smooth motion</li>
+    </ul>
+
+    <img src="images/fully_assembled.jpg" alt="Planetary Gearbox Parts">
+    <div class="caption">Final assembled planetary gearbox with casing fastened by machine screws and centered output shaft exposed.</div>
+
+    <img src="images/front_cover_removed.jpg" alt="Gear Carrier Detail">
+    <div class="caption">Front casing removed to reveal the internal gear train: sun gear, planet gears, and supporting carrier.</div>
+
+    <img src="images/fully_disassembled.jpg" alt="Gearbox Assembly Staged">
+    <div class="caption">All printed components disassembled and staged prior to final assembly, including casing, gears, carrier, and fasteners.</div>
+
+    <img src="images/closeup_planet_gears.jpg" alt="Gearbox Assembling in Progress">
+    <div class="caption">Close-up of the carrier assembly showcasing tight meshing of the four planet gears and central sun gear.</div>
+
+    <img src="images/closeup_ring_gear.jpg" alt="Completed Gearbox Unit">
+    <div class="caption">Detailed view of the ring gear with visible alignment notches and interlocking groove interface with the casing.</div>
+
+    <h2>Results</h2>
+    <p>The gearbox functioned smoothly under unloaded conditions, with minimal backlash and consistent gear alignment during hand-driven testing. Although no load testing was performed at this stage, the proof-of-concept validates the fitment and movement integrity. Load testing and dynamic trials are planned for future stages once associated mechanical systems are brought online.</p>
+
+    <h2>Tools & Technologies Used</h2>
+    <ul>
+      <li>Fusion 360 (gear design, assembly modeling)</li>
+      <li>FDM 3D Printer (PLA, 0.4mm nozzle)</li>
+      <li>Calipers for tolerance checks</li>
+      <li>Custom CAD-based fitment testing</li>
+    </ul>
+  </main>
+  <footer>
+    <p>&copy; 2025 Dawson Golden-Collum</p>
+  </footer>
+</body>
+</html>
